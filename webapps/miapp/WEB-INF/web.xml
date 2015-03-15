@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <listener>
+        <description>ServletContextListener</description>
+        <listener-class>test.ContextListener</listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>TestConn</servlet-name>
+        <servlet-class>test.TestConn</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>KandalfTest</servlet-name>
+        <servlet-class>test.KandalfTest</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Async</servlet-name>
+        <servlet-class>test.Async</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestConn</servlet-name>
+        <url-pattern>/index</url-pattern>
+        <url-pattern>/*</url-pattern>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>KandalfTest</servlet-name>
+        <url-pattern>/test</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Async</servlet-name>
+        <url-pattern>/Async</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
